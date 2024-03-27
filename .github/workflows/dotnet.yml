@@ -7,13 +7,13 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
+  welcome: 
+     steps:
       - name: Welcome message
         run: echo "Welcome!"
+
+  build:
+    runs-on: ubuntu-latest
 
       - uses: actions/checkout@v4
 
