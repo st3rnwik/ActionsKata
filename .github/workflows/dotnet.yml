@@ -9,6 +9,7 @@ on:
 jobs:
   welcome:
     runs-on: ubuntu-latest
+
     steps:
       - name: Welcome message
         run: echo "Welcome!"
@@ -29,6 +30,15 @@ jobs:
 
       - name: Build
         run: dotnet build --no-restore
-  
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
       - name: Test
         run: dotnet test --no-build --verbosity normal
+
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome message
+        run: echo "Welcome!"
