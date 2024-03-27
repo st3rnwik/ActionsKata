@@ -15,6 +15,7 @@ jobs:
         run: echo "Welcome!"
 
   build:
+    needs: welcome
     runs-on: ubuntu-latest
 
     steps:
@@ -32,13 +33,15 @@ jobs:
         run: dotnet build --no-restore
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Test
         run: dotnet test --no-build --verbosity normal
 
   publish:
+    needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Welcome message
-        run: echo "Welcome!"
+      - name: Publish
+        run: echo "Publish"
