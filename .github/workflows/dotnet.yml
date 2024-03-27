@@ -7,15 +7,17 @@ on:
     branches: [ "main" ]
 
 jobs:
-  welcome: 
-  runs-on: ubuntu-latest
-     steps:
+  welcome:
+    runs-on: ubuntu-latest
+
+      steps:
       - name: Welcome message
         run: echo "Welcome!"
 
   build:
     runs-on: ubuntu-latest
 
+      steps:
       - uses: actions/checkout@v4
 
       - name: Setup .NET
