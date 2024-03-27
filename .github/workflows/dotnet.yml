@@ -9,15 +9,14 @@ on:
 jobs:
   welcome:
     runs-on: ubuntu-latest
-
-      steps:
+    steps:
       - name: Welcome message
         run: echo "Welcome!"
 
   build:
     runs-on: ubuntu-latest
 
-      steps:
+    steps:
       - uses: actions/checkout@v4
 
       - name: Setup .NET
