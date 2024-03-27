@@ -8,6 +8,7 @@ on:
 
 jobs:
   welcome: 
+  runs-on: ubuntu-latest
      steps:
       - name: Welcome message
         run: echo "Welcome!"
