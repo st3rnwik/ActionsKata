@@ -44,4 +44,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish
-        run: echo "Publish"
+        run: dotnet publish -c Release --output ./Release
